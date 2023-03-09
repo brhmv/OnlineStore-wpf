@@ -1,0 +1,41 @@
+﻿<Window x:Class="Online_Store.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Online_Store"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="450" Background="DarkGoldenrod" FontSize="26" ResizeMode="NoResize">
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox Grid.Column="1" Margin="35" Name="txtbox_page_name" Text="{Binding TempProduct.Name,Mode=TwoWay}"/>
+
+
+
+        <Ellipse Height="50" Fill="gold"/>
+        <TextBox Grid.Column="1" Grid.Row="1" Margin="35" Name="txtbox_page_price" />
+        
+        <TextBox Grid.Column="1" Grid.Row="2" Margin="35" Name="txtbox_page_photo" />
+        <Label Content="Name:" FontWeight="Heavy" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Ellipse Height="50" Fill="Gold" Grid.Row="1"/>
+        <Ellipse Height="50" Fill="Gold" Grid.Row="2"/>
+
+        <Label Content="Price:" FontWeight="Heavy" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Content="Photo:"  FontWeight="Heavy" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Button  Grid.Column="1" Grid.Row="3" Margin="15" Name="btn_page" Content="apply" Width="100" Height="50" Background="Gold" FontWeight="Heavy" Click="btn_page_Click"/>
+
+    </Grid>
+</Window>
